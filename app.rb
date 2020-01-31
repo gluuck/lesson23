@@ -7,6 +7,7 @@ get '/' do
 end
 
 get '/about' do
+
 	erb :about
 end
 
@@ -27,6 +28,10 @@ post '/visit' do
 	@datetime = params[:datetime]
 	@table = params[:table]
 	@color = params[:color]
+	if @username ==''
+		@error ='Введите имя'
+		return erb :visit
+	end
 	erb "ok user name is #{@username}  #{@phone} #{@datetime} #{@table} #{@color}"
 	#gets 
 end
