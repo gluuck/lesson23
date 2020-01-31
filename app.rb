@@ -30,6 +30,14 @@ post '/visit' do
 	@color = params[:color]
 	if @username ==''
 		@error ='Введите имя'
+	elsif @phone == ''
+		@error = 'Введите номер телефона'		
+
+	elsif @datetime == ''
+		@error = 'Неправильная дата и время'		
+	end
+
+	if @error !=''
 		return erb :visit
 	end
 	erb "ok user name is #{@username}  #{@phone} #{@datetime} #{@table} #{@color}"
