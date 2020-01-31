@@ -20,11 +20,13 @@ end
 get '/admin' do
 	erb :admin
 end
+
 post '/visit' do
 	@username = params[:username]
 	@phone = params[:phone]
 	@datetime = params[:datetime]
 	@table = params[:table]
-	erb "ok user name is #{@username}  #{@phone} #{@datetime} #{@table}"
+	@color = params[:color]
+	erb "ok user name is #{@username}  #{@phone} #{@datetime} #{@table} #{@color}"
 	#gets 
 end
