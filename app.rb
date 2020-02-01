@@ -41,7 +41,9 @@ post '/visit' do
 	#		return erb :visit
 	#	end}
 	@error = hh.select { |key,_| params[key] =='' }.values.join(", ")
+	if @error !=''
 	return erb :visit
+	end
 	erb "ok user name is #{@username}  #{@phone} #{@datetime} #{@table} #{@color}"
 	#gets 
 end
