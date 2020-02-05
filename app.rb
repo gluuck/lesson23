@@ -47,3 +47,6 @@ post '/visit' do
 	erb "ok user name is #{@username}  #{@phone} #{@datetime} #{@table} #{@color}"
 	#gets 
 end
+def method_name
+	
+end
